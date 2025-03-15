@@ -3,3 +3,37 @@
 @tailwind utilities;
 
 /* Your custom styles below */ 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* or any other color */
+}
+
+#root,
+body > div,
+.main-wrapper {
+  /* whichever element is wrapping your game */
+  width: 100%;
+  height: 100%;
+  position: relative; 
+  overflow: hidden;
+}
+
+@keyframes shake {
+    from, to {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(10px);
+    }
+  }
+  
+  .animate-shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  }
